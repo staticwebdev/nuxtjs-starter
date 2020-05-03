@@ -41,10 +41,6 @@
         </div>
         <p class="description">{{ project.description }}</p>
         <div class="cta">
-          <a class="button-azure" href="#">
-            <AzureIcon v-bind:w="24" v-bind:h="24" />
-            Deploy to Azure
-          </a>
           <a
             class="button-github"
             v-bind:href="project.html_url"
