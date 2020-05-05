@@ -8,7 +8,7 @@
     "dev": "nuxt",
     "build": "nuxt generate",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt build"
   },
   "dependencies": {
     "isomorphic-unfetch": "^3.0.0",
