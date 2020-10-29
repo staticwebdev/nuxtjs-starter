@@ -1,0 +1,52 @@
+{
+    "routes": [
+        {
+            "route": "/api/*",
+            "allowedRoles": ["authenticated"]
+        },
+        {
+            "route": "/restricted",
+            "allowedRoles": ["authenticated"]
+        },
+        {
+            "route": "/login_aad",
+            "serve": "/.auth/login/aad"
+        },
+        {
+            "route": "/login_google",
+            "serve": "/.auth/login/google"
+        },
+        {
+            "route": "/login_github",
+            "serve": "/.auth/login/github"
+        },
+        {
+            "route": "/login_facebook",
+            "serve": "/.auth/login/facebook"
+        },
+        {
+            "route": "/login_twitter",
+            "serve": "/.auth/login/twitter"
+        },
+        {
+            "route": "/logout",
+            "serve": "/.auth/logout"
+        },
+        {
+            "route": "/*",
+            "serve": "/index.html",
+            "statusCode": 200
+        }
+    ],
+    "platformErrorOverrides": [
+        {
+            "errorType": "NotFound",
+            "serve": "/200.html"
+        },
+        {
+            "errorType": "Unauthenticated",
+            "statusCode": "302",
+            "serve": "/"
+        }
+    ]
+}

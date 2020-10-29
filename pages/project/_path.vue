@@ -1,6 +1,6 @@
 <template>
   <div class="project">
-    <aside>
+    <!-- <aside>
       <h3>You can deploy...</h3>
       <ul>
         <li v-for="project in projects" v-bind:key="project.id">
@@ -11,7 +11,7 @@
           <a href="/">Home</a>
         </li>
       </ul>
-    </aside>
+    </aside> -->
     <main>
       <div class="card-big">
         <component w="249" h="278" v-bind:is="projectData.id"></component>
