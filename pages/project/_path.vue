@@ -27,7 +27,7 @@
           <div class="stats-details">
             <div>
               <WatchIcon v-bind:w="18" v-bind:h="18" />
-              <p>{{ project.watchers_count }}</p>
+              <p>{{ project.subscribers_count }}</p>
             </div>
             <p>watchers</p>
           </div>
