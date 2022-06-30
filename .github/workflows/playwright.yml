@@ -1,14 +1,12 @@
-# This is a basic workflow to help you get started with Actions
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 
 name: Playwright tests
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request and nightly
   push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
   schedule: 
     # nightly
     - cron: '0 0 * * *'
@@ -16,11 +14,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  playwright_tests:
+    # Runs on an ubuntu runner
     runs-on: ubuntu-latest
 
     strategy:
