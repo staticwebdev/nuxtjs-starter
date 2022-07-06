@@ -8,11 +8,15 @@
     "dev": "nuxt",
     "build": "nuxt generate",
     "start": "nuxt start",
-    "generate": "nuxt build"
+    "generate": "nuxt build",
+    "test": "playwright test"
   },
   "dependencies": {
     "isomorphic-unfetch": "^3.1.0",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "playwright": "^1.22.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@playwright/test": "^1.22.2"
+  }
 }
